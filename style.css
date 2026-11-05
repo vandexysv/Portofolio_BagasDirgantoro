@@ -971,15 +971,19 @@ textarea {
 .contact-grid {
     display: grid;
 
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr;
 
-    gap: 100px;
+    gap: 0;
 
     align-items: start;
 }
 
+.contact-grid > div {
+    max-width: 680px;
+}
+
 .contact-description {
-    max-width: 440px;
+    max-width: 560px;
 
     color: #aeb5bd;
 
@@ -1344,4 +1348,224 @@ textarea {
         flex-direction: column;
     }
 
+}
+
+
+/* ==================================================
+   CONTACT - CENTERED DARK SECTION
+================================================== */
+
+.contact-section {
+    min-height: 460px;
+    padding: 88px 0 82px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    background: #050607;
+    border-top: 1px solid #171b1f;
+    border-bottom: 1px solid #171b1f;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-eyebrow {
+    color: #a9c8ff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 12px;
+}
+
+.contact-heading {
+    max-width: 900px;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 38px);
+    font-weight: 600;
+    line-height: 1.16;
+    letter-spacing: -0.8px;
+    margin-bottom: 18px;
+}
+
+.contact-section .contact-description {
+    max-width: 760px;
+    color: #b8c0ca;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 auto;
+}
+
+.contact-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 38px;
+}
+
+.contact-button {
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 21px;
+    color: #ffffff;
+    background: #0d1115;
+    border: 1px solid #303840;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.contact-button:hover {
+    background: #171d23;
+    border-color: #56616c;
+    transform: translateY(-2px);
+}
+
+.contact-button-primary {
+    color: #080a0c;
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.contact-button-primary:hover {
+    color: #080a0c;
+    background: #e4e8ec;
+    border-color: #e4e8ec;
+}
+
+.contact-button i {
+    font-size: 14px;
+}
+
+.contact-external-icon {
+    font-size: 10px !important;
+    margin-left: -4px;
+}
+
+/* CONTACT FOOTER */
+
+.footer {
+    padding: 25px 0;
+    color: #687080;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer p {
+    color: #687080;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #687080;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #202124;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        min-height: auto;
+        padding: 75px 0;
+    }
+
+    .contact-heading {
+        font-size: 30px;
+    }
+
+    .desktop-break {
+        display: none;
+    }
+
+    .contact-section .contact-description {
+        font-size: 14px;
+    }
+
+    .contact-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 28px;
+    }
+
+    .contact-button {
+        width: min(100%, 280px);
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .footer-links {
+        gap: 18px;
+    }
+}
+
+
+
+/* ==================================================
+   FINAL DARK CONTACT + FOOTER OVERRIDES
+================================================== */
+
+/* Keep every contact action dark with readable white text */
+.contact-section .contact-button,
+.contact-section .contact-button-primary,
+.contact-section a.contact-button-primary {
+    color: #ffffff !important;
+    background: #0d1115 !important;
+    border: 1px solid #303840 !important;
+}
+
+.contact-section .contact-button:hover,
+.contact-section .contact-button-primary:hover,
+.contact-section a.contact-button-primary:hover {
+    color: #ffffff !important;
+    background: #1b2229 !important;
+    border-color: #687583 !important;
+}
+
+/* The footer continues the same black background */
+.footer {
+    color: #ffffff !important;
+    background: #050607 !important;
+    border-top: 1px solid #252a30 !important;
+}
+
+.footer p,
+.footer-links a {
+    color: #c5cbd2 !important;
+}
+
+.footer-links a:hover {
+    color: #ffffff !important;
 }
