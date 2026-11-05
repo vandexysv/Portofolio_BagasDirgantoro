@@ -1569,3 +1569,31 @@ textarea {
 .footer-links a:hover {
     color: #ffffff !important;
 }
+
+
+/* FIX: Home page Download CV button */
+.hero-buttons a[download] {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 12px 24px !important;
+    min-height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #59616a !important;
+    border-radius: 100px !important;
+    background: transparent !important;
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    line-height: 1.2;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: 0.3s ease;
+}
+
+.hero-buttons a[download]:hover {
+    background: #111519 !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px);
+}
